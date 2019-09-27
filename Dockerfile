@@ -1,5 +1,5 @@
 FROM debian:10
-LABEL maintainer="DasChaos <Twitter: @DasChaosAT>"
+LABEL maintainer="MrLutin <Discord: MrLutinFou.js 🎄#6969>"
 
 ENV PORT 7788
 ENV UID 0
