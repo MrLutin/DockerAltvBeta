@@ -1,8 +1,8 @@
 version: "3"
 services:
   altv:
-    image: daschaos/altv:stable
-    container_name: altv
+    image: mrlutin/altv-server-beta
+    container_name: altv-beta
     volumes:
       - data:/altv-persistend/
     ports:
