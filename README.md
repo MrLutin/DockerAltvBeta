@@ -1,4 +1,4 @@
-# AltV Docker Image
+# AltV:Server [beta] in a Docker Image
 This is a image to run a server instance from AltV in a Docker Container. It is designed to run with a volume, so that resources, config- and logfiles are persistend and mounted to the server filesystem. 
 
 The container starts without example ressources and configs.
