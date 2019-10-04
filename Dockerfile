@@ -12,8 +12,7 @@ RUN mkdir /altv && \
     mkdir /altv/modules && \
     mkdir /altv/resources-data
 
-RUN apt-get purge -y wget && \
-    apt-get clean
+RUN apt-get clean
 
 RUN mkdir /altv-persistend && \
     mkdir /altv-persistend/config && \
