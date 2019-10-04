@@ -7,20 +7,10 @@ ENV UID 0
 RUN apt-get update && \
     apt-get install -y wget libc-bin
 
-RUN wget --no-cache -O altv-server https://cdn.altv.mp/server/beta/x64_linux/altv-server && \
-    wget --no-cache -O libnode-module.so https://cdn.altv.mp/node-module/beta/x64_linux/modules/libnode-module.so && \
-    wget --no-cache -O libnode.so.72 https://cdn.altv.mp/node-module/beta/x64_linux/libnode.so.72 && \
-    wget --no-cache -O vehmodels.bin https://cdn.altv.mp/server/beta/x64_linux/data/vehmodels.bin&& \
-    wget --no-cache -O vehmods.bin https://cdn.altv.mp/server/beta/x64_linux/data/vehmods.bin && \
-    mkdir /altv && \
+RUN mkdir /altv && \
     mkdir /altv/data && \
     mkdir /altv/modules && \
-    mkdir /altv/resources-data && \
-    mv altv-server /altv/ && \
-    mv libnode.so.72 /altv/ && \
-    mv vehmodels.bin /altv/data && \
-    mv vehmods.bin /altv/data && \
-    mv libnode-module.so /altv/modules
+    mkdir /altv/resources-data
 
 RUN apt-get purge -y wget && \
     apt-get clean
@@ -42,10 +32,9 @@ VOLUME /altv-persistend/
 
 ADD start_server.sh /altv/start_server.sh
 RUN chmod +x /altv/start_server.sh
-RUN chmod +x /altv/altv-server
 
 USER ${UID}
 
 ENTRYPOINT ["/altv/start_server.sh"]
-CMD ["bash"]
+CMD ["tail -f /altv/logs/server.log"]
 
