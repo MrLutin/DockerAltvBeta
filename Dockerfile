@@ -35,5 +35,5 @@ RUN chmod +x /altv/start_server.sh
 USER ${UID}
 
 ENTRYPOINT ["/altv/start_server.sh"]
-CMD ["tail -f /altv/logs/server.log"]
+CMD ["bash"]
 
