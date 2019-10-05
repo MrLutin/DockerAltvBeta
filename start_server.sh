@@ -9,4 +9,4 @@ wget --no-cache "https://cdn.altv.mp/node-module/beta/x64_linux/modules/libnode-
 wget --no-cache "https://cdn.altv.mp/server/beta/x64_linux/data/vehmodels.bin" -O ./data/vehmodels.bin
 wget --no-cache "https://cdn.altv.mp/server/beta/x64_linux/data/vehmods.bin" -O ./data/vehmods.bin
 
-chmod +x ./altv-server && ./altv-server --config "config/server.cfg" --logfile "logs/server.log
+chmod +x ./altv-server && ./altv-server --config "config/server.cfg" --logfile "logs/server.log"
