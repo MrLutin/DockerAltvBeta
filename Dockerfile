@@ -5,7 +5,7 @@ ENV PORT 7788
 ENV UID 0
 
 RUN apt-get update && \
-    apt-get install -y wget libc-bin
+    apt-get install -y wget libc-bin jq libatomic1
 
 RUN mkdir /altv && \
     mkdir /altv/data && \
